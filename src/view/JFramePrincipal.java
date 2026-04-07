@@ -36,12 +36,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMnuFornecedor = new javax.swing.JMenuItem();
         jMnuSair = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jMnuCadastros.setMnemonic('C');
         jMnuCadastros.setText("Cadastro");
 
+        jMnuUsuarios.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnuUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/usuario.png"))); // NOI18N
+        jMnuUsuarios.setMnemonic('U');
         jMnuUsuarios.setText("Usuarios");
         jMnuUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,7 +55,9 @@ public class JFramePrincipal extends javax.swing.JFrame {
         });
         jMnuCadastros.add(jMnuUsuarios);
 
+        jMnuClientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnuClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cliente_1.png"))); // NOI18N
+        jMnuClientes.setMnemonic('C');
         jMnuClientes.setText("Clientes");
         jMnuCadastros.add(jMnuClientes);
         jMnuCadastros.add(jSeparator1);
@@ -58,13 +65,31 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMnuFornecedor.setText("Fornecedor");
         jMnuCadastros.add(jMnuFornecedor);
 
+        jMnuSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnuSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
+        jMnuSair.setMnemonic('S');
         jMnuSair.setText("Sair");
+        jMnuSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnuSairActionPerformed(evt);
+            }
+        });
         jMnuCadastros.add(jMnuSair);
 
         jMenuBar1.add(jMnuCadastros);
 
+        jMenu2.setMnemonic('M');
         jMenu2.setText("Movimentos");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem1.setMnemonic('V');
+        jMenuItem1.setText("Vendas");
+        jMenu2.add(jMenuItem1);
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem2.setText("Compras");
+        jMenu2.add(jMenuItem2);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -88,6 +113,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jDlgMpvUsuarios.setVisible(true );
         // TODO add your handling code here:
     }//GEN-LAST:event_jMnuUsuariosActionPerformed
+
+    private void jMnuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuSairActionPerformed
+        System.exit(0);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMnuSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -127,6 +157,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu jMnuCadastros;
     private javax.swing.JMenuItem jMnuClientes;
     private javax.swing.JMenuItem jMnuFornecedor;

@@ -22,7 +22,7 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro de usuario.");
         setLocationRelativeTo(null);
-        desabilitar();
+        habilitar(false);
     }
 
     public void habilitar (boolean valor){
@@ -252,7 +252,7 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         // TODO add your handling code here:
-    habilitar();
+    habilitar(true);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
@@ -262,12 +262,12 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
-    habilitar();
+    habilitar(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
-    desabilitar();
+    habilitar(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
